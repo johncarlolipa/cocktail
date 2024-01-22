@@ -1,11 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { Cocktail, Home, LandingPage } from "./pages";
+import { Cocktail, Error, Home, LandingPage } from "./pages";
 
 const routes = [
   {
     path: "/",
     element: <Home />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
