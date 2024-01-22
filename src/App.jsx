@@ -1,19 +1,29 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { Cocktail, Home,  } from "./pages";
+import { Cocktail, Home, LandingPage } from "./pages";
 
 const routes = [
   {
     path: "/",
-    element: <Home />
-  },
-  {
-    path: "/cocktail",
-    element: (
-      <div>
-        <Cocktail />
-      </div>
-    ),
+    element: <Home />,
+    children: [
+      {
+        path: "/cocktail",
+        element: (
+          <div>
+            <Cocktail />
+          </div>
+        ),
+      },
+      {
+        index: true,
+        element: (
+          <div>
+            <LandingPage />
+          </div>
+        ),
+      },
+    ],
   },
 ];
 
