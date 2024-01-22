@@ -8,18 +8,18 @@ const routes = [
     element: <Home />,
     children: [
       {
-        path: "/cocktail",
-        element: (
-          <div>
-            <Cocktail />
-          </div>
-        ),
-      },
-      {
         index: true,
         element: (
           <div>
             <LandingPage />
+          </div>
+        ),
+      },
+      {
+        path: "/cocktail",
+        element: (
+          <div>
+            <Cocktail />
           </div>
         ),
       },

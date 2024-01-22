@@ -1,12 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <div>
-    <nav>navbar</nav>
-      <div>
-        <Outlet />
-      </div>
+      <Navbar />
+      <Outlet />
     </div>
   );
 }
