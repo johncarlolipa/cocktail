@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
 export default function CocktailCard({ image, name, id, info, glass }) {
+  const data = useOutletContext();
+  console.log(data);
   return (
     <>
       <div>
