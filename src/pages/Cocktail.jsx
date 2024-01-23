@@ -21,6 +21,14 @@ export default function Cocktail() {
     strInstructions: instructions,
   } = singleDrink;
 
+  const validIngredients = Object.keys(singleDrink)
+    .filter(
+      (key) => key.startsWith("strIngredient") && singleDrink[key] !== null
+    )
+    .map((key) => singleDrink[key]);
+
+  console.log(validIngredients);
+
   return (
     <div>
       <header>
@@ -45,6 +53,17 @@ export default function Cocktail() {
           <p>
             <span>glass: </span>
             {glass}
+          </p>
+          <p>
+            <span>ingredients: </span>
+            {validIngredients.map((item, index) => {
+              return (
+                <span key={item}>
+                  {item}
+                  {index < validIngredients.length - 1 ? "," : ""}
+                </span>
+              );
+            })}
           </p>
           <p>
             <span>instructions: </span>
