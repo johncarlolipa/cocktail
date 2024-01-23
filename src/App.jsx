@@ -20,7 +20,7 @@ const routes = [
         loader: landingLoader,
       },
       {
-        path: "/cocktail",
+        path: "/cocktail/:id",
         element: (
           <div>
             <Cocktail />
