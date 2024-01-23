@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   const navigation = useNavigation();
-  console.log(navigation);
+
   const isPageLoading = navigation.state === "loading";
   const value = "some value";
   return (
