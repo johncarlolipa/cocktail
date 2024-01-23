@@ -2,6 +2,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { Cocktail, Error, Home, LandingPage } from "./pages";
 
+import { loader as landingLoader } from "./pages/LandingPage";
+
 const routes = [
   {
     path: "/",
@@ -15,6 +17,7 @@ const routes = [
             <LandingPage />
           </div>
         ),
+        loader: landingLoader,
       },
       {
         path: "/cocktail",
