@@ -1,9 +1,13 @@
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { Cocktail, Error, Home, LandingPage } from "./pages";
 
 import { loader as landingLoader } from "./pages/LandingPage";
 import { loader as singleCocktailLoader } from "./pages/Cocktail";
+import Newsletter, {
+  action as newsletterAction,
+} from "./components/Newsletter";
 
 const routes = [
   {
@@ -16,9 +20,11 @@ const routes = [
         element: (
           <div>
             <LandingPage />
+            <Newsletter />
           </div>
         ),
         loader: landingLoader,
+        action: newsletterAction,
       },
       {
         path: "/cocktail/:id",
