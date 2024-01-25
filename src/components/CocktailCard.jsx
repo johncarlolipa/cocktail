@@ -4,7 +4,7 @@ export default function CocktailCard({ image, name, id, info, glass }) {
   const data = useOutletContext();
   console.log(data);
   return (
-    <>
+    <div className="border border-black">
       <div>
         <img src={image} alt={name} />
       </div>
@@ -14,6 +14,6 @@ export default function CocktailCard({ image, name, id, info, glass }) {
         <p>{info}</p>
         <Link to={`/cocktail/${id}`}> details</Link>
       </div>
-    </>
+    </div>
   );
 }
