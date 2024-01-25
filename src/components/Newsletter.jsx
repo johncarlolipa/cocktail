@@ -1,13 +1,33 @@
-import { Form } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
+
+const newsletterUrl = 'https://www.course-api.com/cocktails-newsletter';
 
 export const action = async ({ request }) => {
-  const formData = await request.formData();
-  const data = Object.fromEntries(formData);
-  console.log(data);
+  try {
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData);
+
+    const response = await axios.post(newsletterUrl, JSON.stringify(data), {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    console.log(response);
+    toast.success(response.data.msg)
+    return redirect("/");
+  } catch (error) {
+    console.error(error);
+    toast.error("Failed to subscribe to the newsletter");
+  }
+
   return null;
 };
 
 export default function Newsletter() {
+    
   return (
     <Form method="POST">
       <h4>Our Newsletter</h4>
