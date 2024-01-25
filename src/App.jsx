@@ -31,7 +31,7 @@ const routes = [
             <Newsletter />
           </div>
         ),
-        loader: landingLoader,
+        loader: landingLoader(queryClient),
         action: newsletterAction,
       },
       {
