@@ -8,6 +8,7 @@ export const loader = async ({ params }) => {
   const { data } = await axios.get(`${singleUrl}${id}`);
   return { data, id };
 };
+
 export default function Cocktail() {
   const { id, data } = useLoaderData();
 
@@ -29,47 +30,32 @@ export default function Cocktail() {
     )
     .map((key) => singleDrink[key]);
 
-  console.log(validIngredients);
-
   return (
-    <div>
-      <header>
-        <Link to="/">Back Home</Link>
-        <h3>{name}</h3>
-      </header>
+    <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md">
+
       <div>
-        <img src={image} alt={`Image of ${name}`} />
+        <img
+          src={image}
+          alt={`Image of ${name}`}
+          className="w-full h-68 object-cover mb-4 rounded-md"
+        />
         <div>
-          <p>
-            <span>name: </span>
-            {name}
+        <h3 className="text-xl font-bold text-center my-8">{name}</h3>
+          <p className="mb-2">
+            <span className="font-semibold">Category:</span> {category}
           </p>
-          <p>
-            <span>category: </span>
-            {category}
+          <p className="mb-2">
+            <span className="font-semibold">Info:</span> {info}
           </p>
-          <p>
-            <span>info: </span>
-            {info}
+          <p className="mb-2">
+            <span className="font-semibold">Glass:</span> {glass}
           </p>
-          <p>
-            <span>glass: </span>
-            {glass}
+          <p className="mb-2">
+            <span className="font-semibold">Ingredients:</span>{" "}
+            {validIngredients.join(", ")}
           </p>
-          <p>
-            <span>ingredients: </span>
-            {validIngredients.map((item, index) => {
-              return (
-                <span key={item}>
-                  {item}
-                  {index < validIngredients.length - 1 ? "," : ""}
-                </span>
-              );
-            })}
-          </p>
-          <p>
-            <span>instructions: </span>
-            {instructions}
+          <p className="mb-4">
+            <span className="font-semibold">Instructions:</span> {instructions}
           </p>
         </div>
       </div>
