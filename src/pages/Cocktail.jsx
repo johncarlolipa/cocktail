@@ -31,8 +31,7 @@ export default function Cocktail() {
     .map((key) => singleDrink[key]);
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md">
-
+    <div className="max-w-md mx-auto p-4 bg-white  rounded-md my-16">
       <div>
         <img
           src={image}
@@ -40,7 +39,7 @@ export default function Cocktail() {
           className="w-full h-68 object-cover mb-4 rounded-md"
         />
         <div>
-        <h3 className="text-xl font-bold text-center my-8">{name}</h3>
+          <h3 className="text-xl font-bold text-center my-8">{name}</h3>
           <p className="mb-2">
             <span className="font-semibold">Category:</span> {category}
           </p>

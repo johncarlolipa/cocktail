@@ -30,38 +30,47 @@ export default function Newsletter() {
   return (
     <Form
       method="POST"
-      className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md mt-14"
+      className="max-w-md mx-auto p-4 bg-white  rounded-md my-28"
     >
-      <h4 className="text-lg font-bold mb-4 text-center">Subscribe to Our Newsletter</h4>
-      <label
-        htmlFor="name"
-        className="block mb-2 text-sm font-medium text-gray-600"
-      >
-        Name:
-      </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        defaultValue="Juan"
-        required
-        className="w-full p-2 mb-4 border border-gray-300 rounded-md"
-      />
+      <h4 className="text-3xl font-bold mb-4 text-center">
+        Subscribe to Our Newsletter
+      </h4>
 
-      <label
-        htmlFor="lastname"
-        className="block mb-2 text-sm font-medium text-gray-600"
-      >
-        Last Name:
-      </label>
-      <input
-        type="text"
-        id="lastname"
-        name="lastname"
-        defaultValue="Dela Cruz"
-        required
-        className="w-full p-2 mb-4 border border-gray-300 rounded-md"
-      />
+      <div className="grid grid-cols-2 gap-4 mb-4 mt-10">
+        <div>
+          <label
+            htmlFor="name"
+            className="block mb-2 text-sm font-medium text-gray-600"
+          >
+            Name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            defaultValue="Juan"
+            required
+            className="w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="lastname"
+            className="block mb-2 text-sm font-medium text-gray-600"
+          >
+            Last Name:
+          </label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            defaultValue="Dela Cruz"
+            required
+            className="w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+      </div>
 
       <label
         htmlFor="email"
@@ -80,7 +89,7 @@ export default function Newsletter() {
 
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+        className="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 transition duration-300"
       >
         Subscribe
       </button>
