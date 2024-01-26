@@ -6,7 +6,7 @@ export default function Navbar() {
       <Link to="/" className="text-lg font-semibold flex">
         <img
           src="/glass-empty-wine-svgrepo-com.svg"
-          className="h-8 w-10 ml-10"
+          className="h-8 w-10 md:ml-10"
           alt="glass"
         />
         <h3 className="italic">Cocktail Smoky</h3>
