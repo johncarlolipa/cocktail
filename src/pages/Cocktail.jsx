@@ -31,7 +31,7 @@ export default function Cocktail() {
     .map((key) => singleDrink[key]);
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-white  rounded-md my-16">
+    <div className="max-w-md mx-auto p-4 bg-white  rounded-md my-28">
       <div>
         <img
           src={image}
