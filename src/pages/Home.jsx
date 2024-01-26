@@ -1,5 +1,6 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footbar";
 
 export default function Home() {
   const navigation = useNavigation();
@@ -19,6 +20,7 @@ export default function Home() {
           <Outlet context={value} />
         </h1>
       )}
+      <Footer />
     </div>
   );
 }
