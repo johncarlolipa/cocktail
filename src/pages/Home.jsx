@@ -6,7 +6,7 @@ export default function Home() {
   const navigation = useNavigation();
 
   const isPageLoading = navigation.state === "loading";
-  const value = "some value";
+  const value = "";
 
   return (
     <div>

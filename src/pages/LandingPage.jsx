@@ -29,7 +29,7 @@ export const loader =
 export default function LandingPage() {
   const { searchTerm } = useLoaderData();
   const { data: drinks } = useQuery(searchCocktailsQuery(searchTerm));
-  console.log(drinks);
+
 
   return (
     <div className="mx-4 md:mx-24 py-4 mt-20">
