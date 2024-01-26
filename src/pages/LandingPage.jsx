@@ -32,7 +32,7 @@ export default function LandingPage() {
   console.log(drinks);
 
   return (
-    <div className="mx-4 md:mx-24 py-4">
+    <div className="mx-4 md:mx-24 py-4 mt-20">
       <SearchForm searchTerm={searchTerm} />
       <CocktailList drinks={drinks} />
     </div>
